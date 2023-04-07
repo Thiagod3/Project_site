@@ -8,22 +8,7 @@
     <img id="random-img" src="" alt="Imagem aleatória">
     <button onclick="trocarImagem()">Trocar imagem</button>
 
-    <script>
-      // Lista de URLs das imagens
-      var imagens = [
-      "streamers/Bagi.jpg",
-      "streamers/Bocade09.png"
-      ];
-
-      // Função para exibir uma imagem aleatória da lista
-      function trocarImagem() {
-        // Gerar um número aleatório entre 0 e o tamanho da lista de imagens
-        var indice = Math.floor(Math.random() * imagens.length);
-
-        // Selecionar a imagem e atribuir a URL correspondente
-        var img = document.getElementById("random-img");
-        img.src = imagens[indice];
-      }
+    <script src = "script.js">
     </script>
   </body>
 </html>
