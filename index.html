@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>Imagem Aleatória do Google Drive</title>
+    <title>Exemplo de imagem aleatória</title>
   </head>
-  <body onload="atualizarImagem()">
-    <img id="image" alt="Imagem Aleatória">
-    <button onclick="atualizarImagem()">Nova Imagem</button>
+  <body>
+    <h1>Imagem aleatória</h1>
+    <img id="random-img" src="" alt="Imagem aleatória">
+    <button onclick="trocarImagem()">Trocar imagem</button>
 
-    <script src="https://apis.google.com/js/api.js"></script>
-    <script src="script.js"></script>
+    <script>
+      // Lista de URLs das imagens
+      var imagens = [
+      "https://drive.google.com/file/d/1-rAD9Xqh6Fi8lE7-3rRO6HjTRu7OP7FB/view?usp=sharing",
+       "https://drive.google.com/file/d/102AtNRlcwjL4Vsi5IFycEs-UvUEkxv5s/view?usp=sharing",
+        "https://drive.google.com/file/d/10ZQocZMYu4oodpifTkZzJWUszlaH3duA/view?usp=sharing",
+         "https://drive.google.com/file/d/11DUkz8m3JQWBGLHCcTuv_Sl1nQYydS43/view?usp=sharing",
+          "https://drive.google.com/file/d/11MbOEo8FhG8PjTHvI8JnE8_m_e-HjfC_/view?usp=sharing",
+           "https://drive.google.com/file/d/145arMUF9PuWp2Au7XBTif5piERj-3t7v/view?usp=sharing",
+            "https://drive.google.com/file/d/14jK9CC6rL9PcQdMK77TZ6_j_V-mbSZlk/view?usp=sharing",
+             "https://drive.google.com/file/d/15ZOb_47U3S7y5gtLkNXcPQCKdRgR3UUu/view?usp=sharing",
+              "https://drive.google.com/file/d/189JA3v3vgf-X2zwwqA-T9SNuQzBb3B4h/view?usp=sharing",
+              "https://drive.google.com/file/d/18HWRln-N8mctsmUbcjcQEX-l3RrB_A6p/view?usp=sharing",
+               "https://drive.google.com/file/d/19yyjxA03oiXJ3aWaYTkWsfyrPURTWz1k/view?usp=sharing",
+                "https://drive.google.com/file/d/1AUs2-UGKBe_4J74KHBb-KsGYc5zoOPnc/view?usp=sharing",
+                 "https://drive.google.com/file/d/1C7R6MntIJR_F_Qx0NmusEGgP5hhBiroN/view?usp=sharing",
+                  "https://drive.google.com/file/d/1DXsNU97In-wWZPvqc3NVhLyNge8fVKma/view?usp=sharing",
+                   "https://drive.google.com/file/d/1Egr7LOw8LqW6K3W1nb5h2zWql7F-iT-m/view?usp=sharing",
+                    "https://drive.google.com/file/d/1GThbPl5Gmlyak4eOTphsBtswKwa4wJDz/view?usp=sharing",
+                     "https://drive.google.com/file/d/1GuVUWOgKRp41eTvJYGKS-lurIZptnehI/view?usp=sharing",
+                      "https://drive.google.com/file/d/1J557z2qtB-RUZKzuhKdaOdZSZN796CaN/view?usp=sharing",
+                       "https://drive.google.com/file/d/1KWMcKY0htOxjvm89HAqqZ0Df2QedKj4L/view?usp=sharing",
+      ];
+
+      // Função para exibir uma imagem aleatória da lista
+      function trocarImagem() {
+        // Gerar um número aleatório entre 0 e o tamanho da lista de imagens
+        var indice = Math.floor(Math.random() * imagens.length);
+
+        // Selecionar a imagem e atribuir a URL correspondente
+        var img = document.getElementById("random-img");
+        img.src = imagens[indice];
+      }
+    </script>
   </body>
 </html>
 
