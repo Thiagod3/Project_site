@@ -2,18 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Imagem aleatória do Google Drive</title>
+    <title>Imagem Aleatória do Google Drive</title>
   </head>
-  <body>
-    <img id="random-image" src="" alt="Imagem aleatória do Google Drive">
-    <button onclick="atualizarImagem()">Atualizar imagem</button>
-    
-    <script>
-      function atualizarImagem() {
-        // código para atualizar a imagem
-      }
-    </script>
+  <body onload="atualizarImagem()">
+    <img id="image" alt="Imagem Aleatória">
+    <button onclick="atualizarImagem()">Nova Imagem</button>
 
-    <script>src = "script.js"</script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
+
